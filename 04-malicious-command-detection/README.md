@@ -32,7 +32,7 @@ Wazuh Dashboard — Security Events (level 12)
 graph TD
     A[User executes: wget / curl / nc / nmap] --> B[Linux Kernel Audit Subsystem]
     B --> C[auditd records EXECVE syscall event]
-    C --> D[/var/log/audit/audit.log]
+    C --> D["/var/log/audit/audit.log"]
     D --> E[Wazuh Agent localfile monitor]
     E --> F[Wazuh Manager]
     F --> G{Matches custom rule 100300?}
